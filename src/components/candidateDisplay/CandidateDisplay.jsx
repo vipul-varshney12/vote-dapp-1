@@ -4,10 +4,14 @@ import "./CandidateDisplay.css";
 const CandidateDisplay = () => {
   const { contract } = useContext(WalletContext);
   const [candidates, setCandidates] = useState([]);
+ 
   useEffect(() => {
     const candidateInfo = async () => {
       const candidates = await contract.methods.candidateList().call();
+     
+    //  console.log(candidates);
       setCandidates(candidates);
+
     };
     contract && candidateInfo();
   }, [contract]);
@@ -16,12 +20,14 @@ const CandidateDisplay = () => {
   }
   return (
     <div className="table-container">
+   
       <table className="voter-table">
         <thead>
           <tr>
             <th>Name</th>
             <th>Party</th>
             <th>Votes</th>
+            <th>candidate_Id</th>
           </tr>
         </thead>
         <tbody>
@@ -31,6 +37,7 @@ const CandidateDisplay = () => {
                 <td>{candidate.name}</td>
                 <td>{candidate.party}</td>
                 <td>{candidate.votes}</td>
+                <td>{candidate.candidateId}</td>
               </tr>
             ))
           ) : (
@@ -38,6 +45,7 @@ const CandidateDisplay = () => {
           )}
         </tbody>
       </table>
+     
     </div>
   );
 };

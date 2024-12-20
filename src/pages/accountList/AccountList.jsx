@@ -61,6 +61,7 @@ const AccountList = ({ saveAccount }) => {
           *Go to Menu: Register for New candidate & Voter for a standin person
         </p>
       </div>
+      
     </div>
   );
 };

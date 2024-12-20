@@ -14,7 +14,7 @@ const Wallet = ({ children }) => {
   useEffect(() => {
     const init = async () => {
       const web3 = new Web3("HTTP://127.0.0.1:7545");
-      const contractAddress = "0xefcBB14CB15caB70849442E12F5A04C36d5fA673";
+      const contractAddress = "0x2904454A25c5E6e2d80b6fD606a158a6b8e3533d";
       //to create contract instance - abi and contract address
       const contract = new web3.eth.Contract(ABI, contractAddress);
       setState({ web3: web3, contract: contract });
@@ -32,3 +32,4 @@ Wallet.propTypes = {
 };
 export { WalletContext };
 export default Wallet;
+//candidateId;

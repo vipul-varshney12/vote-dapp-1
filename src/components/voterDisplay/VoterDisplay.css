@@ -15,7 +15,7 @@ table.voter-table {
 
 th,
 td {
-  border: 1px solid #ddd;
+  border: 1px solid #8840c7;
   padding: 8px;
   text-align: left;
 }
@@ -25,7 +25,7 @@ th {
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 1px;
-  background-color: #f2f2f2;
+  background-color: #c1a9e1;
 }
 
 /* Set fixed widths for each column */
@@ -78,3 +78,64 @@ td:nth-child(3) {
     min-width: 20px;
   }
 }
+/* CSS code for Voter Table styling */
+.voter-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.voter-table th,
+.voter-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.voter-table thead th {
+  background-color: #4CAF50;
+  color: white;
+  position: sticky;
+  top: 0;
+}
+
+.voter-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Responsive Styling */
+@media (max-width: 600px) {
+  .voter-table {
+    border: 0;
+  }
+  .voter-table thead {
+    display: none;
+  }
+  .voter-table tr {
+    margin-bottom: 10px;
+    display: block;
+  }
+  .voter-table td {
+    border-bottom: 1px solid #f0f0f0;
+    display: block;
+    text-align: right;
+  }
+}
+.voter-table {
+  /* existing styles */
+
+  border: 1px solid black; /* Adding 2px black border to the voter table */
+}
+
+.voter-table th,
+.voter-table td {
+  /* existing styles */
+  border: 1px solid black; /* Adding 2px black border to table cells */
+}
+

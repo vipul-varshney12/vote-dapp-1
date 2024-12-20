@@ -7,6 +7,7 @@ import { toast } from "react-hot-toast";
 
 const ElectionCommision = ({ account }) => {
   const [winner, setWinner] = useState("No Winner Yet");
+  const[name,setName]=useState("no winner till");
   const { contract } = useContext(WalletContext);
 
   const dateToSeconds = (dateTimeString) => {
@@ -50,7 +51,10 @@ const ElectionCommision = ({ account }) => {
     try {
       await contract.methods.result().send({ from: account, gas: 480000 });
       const winCandidate = await contract.methods.winner().call();
+      const WinnerName=await contract.methods.getWinnerName().call();
+
       setWinner(winCandidate);
+      setName(WinnerName);
       toast.success("Result Out");
     } catch (error) {
       toast.error("Result Declaration Failed");
@@ -64,7 +68,7 @@ const ElectionCommision = ({ account }) => {
 
         <div className="election-wrapper">
           <h2>
-            Winner is: <br /> {winner}{" "}
+            Winner is: <br />{name}  {winner}{" "}
           </h2>
           <form className="election-form" onSubmit={votingTime}>
             <label htmlFor="start">Start Time</label>

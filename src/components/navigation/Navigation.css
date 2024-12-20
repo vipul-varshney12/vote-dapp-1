@@ -12,7 +12,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   margin-left: 80px;
-  margin-right: 80px;
+  margin-right: 90px;
 }
 nav ul {
   list-style: none;
@@ -22,20 +22,21 @@ nav ul {
   justify-content: center;
 }
 .connected-account {
+  
   cursor: not-allowed;
 }
 
 .nav-link {
   text-decoration: none;
-  font-size: 14px;
-  color: #fff;
+  font-size: 17px;
+  color: #f6f1f1;
   padding: 10px 14px;
   position: relative;
   transition: color 0.3s ease-in-out;
 }
 
 .nav-link:hover {
-  color: #ffffff;
+  color: #302e2e;
 }
 
 .nav-link::before {

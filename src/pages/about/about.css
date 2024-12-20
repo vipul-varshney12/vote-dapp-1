@@ -1,0 +1,53 @@
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+.about-us-section {
+background: #151414;
+color: #fff;
+}
+.about-us-header {
+text-align: center;
+}
+.about-us-content img {
+max-width: 100%;
+height: auto;
+}
+.about-us-text h3 {
+color: #ff5e14;
+font-size: 20px;
+font-weight: 600;
+margin-bottom: 10px;
+}
+.team-section {
+margin-top: 40px;
+}
+.team-member {
+text-align: center;
+}
+.team-member img {
+border-radius: 50%;
+max-width: 150px;
+}
+footer {
+  background: #202020;
+}
+.footer-menu {
+text-align: center;
+margin-top: 40px;
+}
+.footer-menu ul {
+list-style: none;
+padding: 0;
+}
+.footer-menu li {
+display: inline-block;
+margin-left: 20px;
+}
+.footer-menu li a {
+font-size: 14px;
+color: #878787;
+}
+.footer-menu li:hover a {
+color: #ff5e14;
+}

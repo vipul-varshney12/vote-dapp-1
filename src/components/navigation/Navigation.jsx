@@ -30,6 +30,11 @@ const Navigation = ({ account }) => {
               Election Commision
             </Link>
           </li>
+          <li>
+            <Link className="nav-link" to="/about">
+              AboutUs
+            </Link>
+          </li>
         </ul>
       </nav>
     </header>

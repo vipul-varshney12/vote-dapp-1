@@ -5,6 +5,7 @@ import CandidateRegister from "./pages/candidateRegister/CandidateRegister";
 import ElectionCommision from "./pages/electionCommision/ElectionCommision";
 import VoterRegister from "./pages/voterRegister/VoterRegister";
 import Wallet from "./components/Wallet";
+import About from "./pages/about/About";
 
 function App() {
   const [account, setAccount] = useState("");
@@ -15,6 +16,8 @@ function App() {
     { path: "/", element: <AccountList saveAccount={saveAccount} /> },
     { path: "/candidate", element: <CandidateRegister account={account} /> },
     { path: "/voter", element: <VoterRegister account={account} /> },
+    { path: "/about", element: <About /> },
+
     {
       path: "/election-commision",
       element: <ElectionCommision account={account} />,
